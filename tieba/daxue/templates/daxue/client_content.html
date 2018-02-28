@@ -1,0 +1,202 @@
+<div class="content">
+        <div class="container-fluid">
+            <!-- upper main stats -->
+            <div id="main-stats">
+                <div class="row-fluid stats-row">
+                    <div class="span3 stat">
+                        <div class="data">
+                            <span class="number">212155</span>
+                            原帖数
+                        </div>
+                        <span class="date">2015年-2017年5月数据</span>
+                    </div>
+                    <div class="span3 stat">
+                        <div class="data">
+                            <span class="number">208886</span>
+                            帖子数
+                        </div>
+                        <span class="date">去除删除了的帖子</span>
+                    </div>
+                    <div class="span3 stat">
+                        <div class="data">
+                            <span class="number">189146</span>
+                            用户数
+                        </div>
+                        <span class="date">2015-2017年活跃的用户</span>
+                    </div>
+                    <div class="span3 stat last">
+                        <div class="data">
+                            <span class="number">21960</span>
+                            会员数
+                        </div>
+                        <span class="date">2017年5月的所有会员数</span>
+                    </div>
+                </div>
+            </div>
+            <!-- end upper main stats -->
+            <div id="pad-wrapper">
+                <!-- statistics chart built with jQuery Flot -->
+                <!--<div class="row-fluid chart">-->
+                    <!--<h4>-->
+                        <!--Statistics-->
+                         <!--<div class="btn-group pull-right">-->
+                            <!--<button class="glow left">DAY</button>-->
+                            <!--<button class="glow middle active">MONTH</button>-->
+                            <!--<button class="glow right">YEAR</button>-->
+                        <!--</div>-->
+                    <!--</h4>-->
+                    <!--<div class="span12">-->
+                <div class="" style="width: 1100px; height: 300px;">
+                    <div class="" style="width:20px; height: 300px; float: left; "></div>
+                    <div id="client_type" style="width: 500px;height:400px;float: left;"></div>
+                    <script type="text/javascript">
+                            // 基于准备好的dom，初始化echarts实例
+                            var myChart = echarts.init(document.getElementById('client_type'));
+
+                            // 使用刚指定的配置项和数据显示图表。
+                            myChart.setOption({
+                                backgroundColor: '#eeeeee',
+                                title : {
+                                        text: '客 户 端 统 计',
+                                        x:'center',
+                                        textStyle:{
+                                            color: '#000',
+                                            fontStyle: 'normal'
+                                        }
+                                    },
+                                    tooltip : {
+                                        trigger: 'item',
+                                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                                    }
+                                ,
+                            legend: {
+                                x: 'center',
+                                y: 'bottom',
+                                data: ["Android", "Apple", "Unknown"]
+                            },
+                                    series : [
+                                        {
+                                            name: 'https://tieba.baidu.com/index.html',
+                                            type: 'pie',
+                                            radius : '55%',
+                                            center: ['50%', '50%'],
+                                        data:[
+                                            {value:104762, name:'Android'},
+                                            {value:34621, name:'Apple'},
+                                            {value:69503, name:'Unknown'}
+                                            ],
+                                            label: {
+                                                normal: {
+                                                    textStyle: {
+                                                        color: 'rgba(0, 0, 0, 1)'
+                                                        }
+                                                    }
+                                                },
+                                            itemStyle: {
+                                                normal: {
+                                                // 阴影的大小
+                                                shadowBlur: 100,
+                                                // 阴影水平方向上的偏移
+                                                shadowOffsetX: 0,
+                                                // 阴影垂直方向上的偏移
+                                                shadowOffsetY: 0,
+                                                // 阴影颜色
+                                                shadowColor: 'rgba(0,0,0,0.3)'
+                                                }
+                                            }
+                                        }
+                                    ]
+                                })
+                        </script>
+
+                    <div class="" style="width:20px; height: 300px; float: left; "></div>
+                   <div id="sex" style="width: 500px;height:400px;float: left;">
+                       <div align="center" style="padding-top: 40px;">
+                            <h4 style="float: left; color: #0066cc">数据分析结论：</h4>
+                        <br>
+                            <div style="height: 10px; width: 500px;"></div>
+                            <h5 style="float:left; padding-left: 100px;">
+                                1. 大学吧中使用Android的用户数量占到了一半。
+                            </h5>
+                        <br>
+                            <div style="height: 10px; width: 500px;"></div>
+                            <h5 style="float:left; padding-left: 100px;">
+                                2. 其中未知类型中包含了web界面，或者其他操作系统的手机。
+                            </h5>
+                        <br>
+                        </div>
+
+                   </div>
+                    <!--<script type="text/javascript">-->
+                            <!--// 基于准备好的dom，初始化echarts实例-->
+                            <!--var myChart = echarts.init(document.getElementById('sex'));-->
+
+                            <!--// 使用刚指定的配置项和数据显示图表。-->
+                            <!--myChart.setOption({-->
+                                <!--backgroundColor: '#eeeeee',-->
+                                <!--title : {-->
+                                        <!--text: '性 别 比 例 统 计',-->
+                                        <!--x:'center',-->
+                                        <!--textStyle:{-->
+                                            <!--color: '#000',-->
+                                            <!--fontStyle: 'normal'-->
+                                        <!--}-->
+                                    <!--},-->
+                                    <!--tooltip : {-->
+                                        <!--trigger: 'item',-->
+                                        <!--formatter: "{a} <br/>{b} : {c} ({d}%)"-->
+                                    <!--},-->
+                                    <!--series : [-->
+                                        <!--{-->
+                                            <!--name: 'https://tieba.baidu.com/index.html',-->
+                                            <!--type: 'pie',-->
+                                            <!--radius : '55%',-->
+                                            <!--center: ['50%', '60%'],-->
+                                        <!--data:[-->
+                                            <!--{value:122223, name:'女生'},-->
+                                            <!--{value:66923, name:'男生'}-->
+                                            <!--],-->
+                                            <!--label: {-->
+                                                <!--normal: {-->
+                                                    <!--textStyle: {-->
+                                                        <!--color: 'rgba(0, 0, 0, 1)'-->
+                                                        <!--}-->
+                                                    <!--}-->
+                                                <!--},-->
+                                            <!--itemStyle: {-->
+                                                <!--normal: {-->
+                                                <!--// 阴影的大小-->
+                                                <!--shadowBlur: 100,-->
+                                                <!--// 阴影水平方向上的偏移-->
+                                                <!--shadowOffsetX: 0,-->
+                                                <!--// 阴影垂直方向上的偏移-->
+                                                <!--shadowOffsetY: 0,-->
+                                                <!--// 阴影颜色-->
+                                                <!--shadowColor: 'rgba(0,0,0,0.3)'-->
+                                                <!--}-->
+                                            <!--}-->
+                                        <!--}-->
+                                    <!--]-->
+                                <!--})-->
+                        <!--</script>-->
+                </div>
+                </div>
+
+                <div id="statsChart" style="padding: 0px; position: relative;"></div>
+            </div>
+                <!-- end statistics chart -->
+
+            <!-- UI Elements section -->
+            <div class="row-fluid section ui-elements">
+
+            </div>
+            <!-- end UI elements section -->
+
+            <!-- table sample -->
+            <!-- the script for the toggle all checkboxes from header is located in js/theme.js -->
+            <div class="table-products section">
+
+            </div>
+            <!-- end table sample -->
+        </div>
+

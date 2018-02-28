@@ -1,0 +1,14 @@
+username: shiwei
+password: 123456
+E-mail: wsw_it_3325@163.com
+
+
+createsuperuser
+username: wsw
+password: 123456
+E-mail: wsw_it_3325@163.com
+
+
+在Python3.4 版本中，是不支持MySQLdb的，找到的替代软件包为mysqldb ，但是在django项目中必须添加如下内容：
+    import pymysql
+    pymysql.install_as_MySQLdb()

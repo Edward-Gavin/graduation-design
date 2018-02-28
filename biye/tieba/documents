@@ -1,0 +1,54 @@
+大学吧主页中的所有的200000个帖子：
+    标题： titile
+    帖子主页： homepage
+    帖子作者：post_author
+    作者主页：author_home
+
+帖子信息：
+    标题：post_title
+    主页：post_home
+    评论数：review_num
+    发帖人：nickname
+    发帖人ID：au_id
+    发帖日期：str_date
+    发帖时间：str_time
+    发帖客户端：client_type
+
+用户信息：（作者信息）
+    ID：au_id
+    昵称：nickname
+    性别：sex
+    会员：members
+    吧龄：postage
+    发帖数：post_number
+
+会员简介：
+    主页：homepage
+    昵称：nickname
+    等级：level
+
+会员信息：
+    昵称：nickname
+    性别：sex
+    吧龄：barage
+    发帖：post_number
+    主页：homepage
+    等级：level
+
+
+相似账号说明：
+    类型一：随机数用户。（可能是生成的随机数加密后取的前几位）
+    类型二：昵称中，某些字段是一样的，但是其他一个字或编号不同。
+    类型三：在贴吧中的发帖数为0，评论数为0
+    类型四：在本贴吧中的评论数为0
+    类型五：贴吧404，表示用户不存在，僵尸用户
+
+分析数据：
+    1. 性别分析，通过会员信息表获得会员用户的主页，获得性别
+    2. 客户端类型分析。
+    3. 日期分析，分析出每一年中每个月的发帖数
+    4. 时间分析，分析出一天中所有小时中的发帖数
+    5. 发帖数统计
+    6. 回帖数统计
+    7.
+

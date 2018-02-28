@@ -1,0 +1,136 @@
+<div class="content">
+        <div class="container-fluid">
+            <!-- upper main stats -->
+            <div id="main-stats">
+                <div class="row-fluid stats-row">
+                    <div class="span3 stat">
+                        <div class="data">
+                            <span class="number">212155</span>
+                            原帖数
+                        </div>
+                        <span class="date">2015年-2017年5月数据</span>
+                    </div>
+                    <div class="span3 stat">
+                        <div class="data">
+                            <span class="number">208886</span>
+                            帖子数
+                        </div>
+                        <span class="date">去除删除了的帖子</span>
+                    </div>
+                    <div class="span3 stat">
+                        <div class="data">
+                            <span class="number">189146</span>
+                            用户数
+                        </div>
+                        <span class="date">2015-2017年活跃的用户</span>
+                    </div>
+                    <div class="span3 stat last">
+                        <div class="data">
+                            <span class="number">21960</span>
+                            会员数
+                        </div>
+                        <span class="date">2017年5月的所有会员数</span>
+                    </div>
+                </div>
+            </div>
+            <!-- end upper main stats -->
+            <div id="pad-wrapper">
+                <div class="" style="width: 1100px; height: 300px;">
+                    <div class="" style="width:300px;  float: left; "></div>
+                    <div id="container" style="width: 800px;height:400px; padding-left: 100px;"></div>
+                        <script type="text/javascript">
+                            var dom = document.getElementById("container");
+                            var myChart = echarts.init(dom);
+                            var app = {};
+                            option = null;
+                            app.title = '折柱混合';
+
+                            option = {
+                                title: {
+                                    text: '每月发帖数统计'
+                                },
+                                tooltip: {
+                                    trigger: 'axis',
+                                    axisPointer: {
+                                        type: 'cross',
+                                        crossStyle: {
+                                            color: '#999'
+                                        }
+                                    }
+                                },
+                                toolbox: {
+                                    feature: {
+                                        dataView: {show: true, readOnly: false},
+                                        magicType: {show: true, type: ['line', 'bar']},
+                                        restore: {show: true},
+                                        saveAsImage: {show: true}
+                                    }
+                                },
+                                legend: {
+                                    data:['2015年','2016年','2017年']
+                                },
+                                xAxis: [
+                                    {
+                                        type: 'category',
+                                        name: "时间",
+                                        data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+                                        axisPointer: {
+                                            type: 'shadow'
+                                        }
+                                    }
+                                ],
+                                yAxis: [
+                                    {
+                                        type: 'value',
+                                        name: '发帖数',
+                                        min: 0,
+                                        max: 20000,
+                                        interval: 1000
+                                    },
+                                    {
+                                    }
+                                ],
+                                series: [
+                                    {
+                                        name:'2015年',
+                                        type:'bar',
+                                        data:[11645, 6689, 11318, 16726, 8954, 13056, 10597, 8953, 1077, 167, 208, 213]
+                                    },
+                                    {
+                                        name:'2016年',
+                                        type:'bar',
+                                        data:[277, 527, 12541, 13205, 12151, 10125, 6474, 4720, 4913, 5187, 5241, 5584]
+                                    },
+                                    {
+                                        name:'2017年',
+                                        type:'line',
+                                        yAxisIndex: 1,
+                                        data:[4258, 3529, 4499, 2291, 0, 0, 0, 0, 0, 0, 0, 0]
+                                    }
+                                ]
+                            };
+                            if (option && typeof option === "object") {
+                                myChart.setOption(option, true);
+                            }
+                        </script>
+                    <div class="" style="width:20px; height: 300px; float: left; "></div>
+                </div>
+                </div>
+
+                <div id="statsChart" style="padding: 0px; position: relative;"></div>
+            </div>
+                <!-- end statistics chart -->
+
+            <!-- UI Elements section -->
+            <div class="row-fluid section ui-elements">
+
+            </div>
+            <!-- end UI elements section -->
+
+            <!-- table sample -->
+            <!-- the script for the toggle all checkboxes from header is located in js/theme.js -->
+            <div class="table-products section">
+
+            </div>
+            <!-- end table sample -->
+        </div>

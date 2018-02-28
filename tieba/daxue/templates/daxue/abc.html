@@ -1,0 +1,62 @@
+    <!DOCTYPE html>  
+    <html>  
+        <head>  
+            <meta charset="UTF-8">  
+            <title>echarts-JSON请求数据</title>  
+            <script type="text/javascript" src="../../static/js/jquery-3.2.1.min.js" ></script>
+            <script type="text/javascript" src="../../static/js/echarts.js" ></script>
+            <script>  
+                $(document).ready(function(){  
+                    var chart = document.getElementById('chart');  
+                    var chartData = echarts.init(chart);  
+          
+                    chartData.setOption({  
+                        title: {  
+                            text: '性别比例统计'
+                        },  
+                        tooltip: {},  
+                        legend: {  
+                            data:['性别']
+                        },  
+                        xAxis: {  
+                            data: []  
+                        },  
+                        yAxis: {},  
+                        series: [{  
+                            name: '销量',  
+                            type: 'bar',  
+                            data: []  
+                        }]  
+                    });  
+                      
+                    $.get('data1.json').done(function (data) {
+                        alert('aba');
+                        console.dir(data);
+                        alert(data);
+                        // 填入数据  
+                        chartData.setOption({  
+                            xAxis: {  
+                                data: data.categories  
+                            },  
+                            series: [{  
+                                name: '销量',  
+                                data: data.data  
+                            }]  
+                        });  
+                      
+                    });  
+                      
+                    function eConsole(param)   
+                    {  
+                        console.dir(param);  
+                    }  
+                      
+                    chartData.on("click",eConsole);  
+                });  
+      
+            </script>  
+        </head>  
+        <body>  
+            <div id="chart" style="width: 400px; height: 300px;">abc</div>
+        </body>  
+    </html>  
