@@ -2,7 +2,7 @@ DATA ANALYSIS SYSTEM
 
 
 Version: 1.0
-Author: xiaokea
+Author: Ed Gavin
 E-mail: wsw_it_3325@163.com
 
 
@@ -50,4 +50,4 @@ tieba
     │  │  └─daxue
     │  └─__pycache__
     └─tieba
-└─__pycache__
+       └─__pycache__
